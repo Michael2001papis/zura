@@ -1,0 +1,12 @@
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.bottom-menu {
+    display: flex;
+    justify-content: center;
+}

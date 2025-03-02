@@ -1,0 +1,9 @@
+
+.contract-summary {
+    margin-top: 20px;
+}
+.contract-summary form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

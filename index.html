@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Website - M.P. Projects H.E.: .. Made by (Michael-Papismedov(24) /1621/) </title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/Styles/TopMenu.css">
+    <link rel="stylesheet" href="/Styles/Title.css">
+    <link rel="stylesheet" href="/Styles/Table.css">
+    <link rel="stylesheet" href="/Styles/Form.css">
+    <link rel="stylesheet" href="/Styles/Button.css">
+    <link rel="stylesheet" href="/Styles/BottomMenu.css">
+
+    <!-- <script src="script.js" defer ></script> -->
+    <script src="/ScrJS/Table.js" defer ></script>
+    <script src="/ScrJS/Form.js" defer ></script>
+    
+
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="top-menu">תפריט עליון</nav>
+    </header>
+
+
+    <main>
+
+        <section class="container">
+
+            <div class="profile-container">
+                <img src="profile.jpg" alt="תמונה אישית">
+                <p>שם המשתמש</p>
+                <h1 class="title">כותרת ראשית</h1>
+            </div>
+
+        </section>
+        
+        <section class="container">
+
+            <table class="pricing-table">
+
+                <thead>
+
+                    <tr>
+                        <th>דירה</th>
+                        <th>סוג העבודה</th>
+                        <th>כמות (מ"ר)</th>
+                        <th>מחיר ל-10 מ"ר (ש"ח)</th>
+                        <th>סה"כ ללא מע"מ</th>
+                        <th>מע"מ (18%)</th>
+                        <th>סה"כ כולל מע"מ</th>
+                        <th>חישוב</th>
+                    </tr>
+                    
+                </thead>
+
+                <tbody id="table-body">
+
+                    <tr>
+                        <td><input type="number" min="1" class="apartment-number"></td>
+                        <td>
+                            <select class="work-type">
+                                <option value="gips">עבודות גבס</option>
+                                <option value="demolition">הריסה</option>
+                                <option value="waste">פינוי פסולת</option>
+                                <option value="others">אחר</option>
+                            </select>
+                        </td>
+                        <td><input type="number" min="1" class="quantity"></td>
+                        <td><input type="number" min="1" class="price-per-10"></td>
+                        <td class="total-before-tax">0</td>
+                        <td class="tax-amount">0</td>
+                        <td class="total-with-tax">0</td>
+                        <td><button onclick="calculateRow(this)">חשב</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="number" min="1" class="apartment-number"></td>
+                        <td>
+                            <select class="work-type">
+                                <option value="gips">עבודות גבס</option>
+                                <option value="demolition">הריסה</option>
+                                <option value="waste">פינוי פסולת</option>
+                                <option value="others">אחר</option>
+                            </select>
+                        </td>
+                        <td><input type="number" min="1" class="quantity"></td>
+                        <td><input type="number" min="1" class="price-per-10"></td>
+                        <td class="total-before-tax">0</td>
+                        <td class="tax-amount">0</td>
+                        <td class="total-with-tax">0</td>
+                        <td><button onclick="calculateRow(this)">חשב</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="number" min="1" class="apartment-number"></td>
+                        <td>
+                            <select class="work-type">
+                                <option value="gips">עבודות גבס</option>
+                                <option value="demolition">הריסה</option>
+                                <option value="waste">פינוי פסולת</option>
+                                <option value="others">אחר</option>
+                            </select>
+                        </td>
+                        <td><input type="number" min="1" class="quantity"></td>
+                        <td><input type="number" min="1" class="price-per-10"></td>
+                        <td class="total-before-tax">0</td>
+                        <td class="tax-amount">0</td>
+                        <td class="total-with-tax">0</td>
+                        <td><button onclick="calculateRow(this)">חשב</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="number" min="1" class="apartment-number"></td>
+                        <td>
+                            <select class="work-type">
+                                <option value="gips">עבודות גבס</option>
+                                <option value="demolition">הריסה</option>
+                                <option value="waste">פינוי פסולת</option>
+                                <option value="others">אחר</option>
+                            </select>
+                        </td>
+                        <td><input type="number" min="1" class="quantity"></td>
+                        <td><input type="number" min="1" class="price-per-10"></td>
+                        <td class="total-before-tax">0</td>
+                        <td class="tax-amount">0</td>
+                        <td class="total-with-tax">0</td>
+                        <td><button onclick="calculateRow(this)">חשב</button></td>
+                    </tr>
+
+                    <script>
+                        for (let i = 0; i < 7; i++) {
+                            document.write(`
+                                <tr>
+                                    <td><input type="number" min="1" class="apartment-number"></td>
+                                    <td>
+                                        <select class="work-type">
+                                            <option value="gips">עבודות גבס</option>
+                                            <option value="demolition">הריסה</option>
+                                            <option value="waste">פינוי פסולת</option>
+                                            <option value="others">אחר</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="number" min="1" class="quantity"></td>
+                                    <td><input type="number" min="1" class="price-per-10"></td>
+                                    <td class="total-before-tax">0</td>
+                                    <td class="tax-amount">0</td>
+                                    <td class="total-with-tax">0</td>
+                                    <td><button onclick="calculateRow(this)">חשב</button></td>
+                                </tr>
+                            `);
+                        }
+                    </script>
+
+                </tbody>
+
+            </table>
+
+            <div style="margin-top: 20px;">
+
+                <strong>סיכום כולל:</strong><br>
+                סה"כ ללא מע"מ: <span id="grand-total-before-tax">0</span> ש"ח<br>
+                סה"כ מע"מ: <span id="grand-tax-amount">0</span> ש"ח<br>
+                סה"כ כולל מע"מ: <span id="grand-total-with-tax">0</span> ש"ח<br>
+                <button onclick="calculateGrandTotal()">חשב הכל</button>
+                
+            </div>
+
+        </section>
+        
+        <section class="container contract-summary">
+
+            <form id="contract-form">
+                <label for="first-name">שם פרטי</label>
+                <input type="text" id="first-name" required>
+                
+                <label for="last-name">שם משפחה</label>
+                <input type="text" id="last-name" required>
+                
+                <label for="date">תאריך העסקה</label>
+                <input type="date" id="date" required>
+                
+                <label for="signer">שם החותם</label>
+                <input type="text" id="signer" required>
+                
+                <label for="special-requests">בקשות מיוחדות</label>
+                <textarea id="special-requests" maxlength="300"></textarea>
+                
+                <label>סוג המגורים</label>
+                <select id="housing-type" onchange="toggleOtherHousing()">
+                    <option value="apartment">דירה</option>
+                    <option value="private-house">בית פרטי</option>
+                    <option value="villa">וילה</option>
+                    <option value="other">אחר...</option>
+                </select>
+                <input type="text" id="other-housing" placeholder="פרט את סוג המגורים" style="display: none;">
+                
+                <button type="button" onclick="printPage()">הדפס</button>
+                <button type="button" onclick="confirmReset()">ביטול</button>
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <nav class="bottom-menu">תפריט תחתון</nav>
+    </footer>
+
+
+</body>
+</html>
