@@ -3,6 +3,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    font-size: 16px;
 }
 .pricing-table th, .pricing-table td {
     border: 1px solid black;
@@ -10,6 +11,38 @@
     text-align: center;
 }
 
+/* עיצוב רספונסיבי למסכים קטנים */
+@media (max-width: 768px) {
+    .pricing-table {
+        font-size: 14px;
+    }
+    .pricing-table th, .pricing-table td {
+        padding: 8px;
+    }
+}
+/* עיצוב רספונסיבי למסכים ממש קטנים (ניידים) */
+@media (max-width: 480px) {
+    .pricing-table {
+        font-size: 12px;
+    }
+    .pricing-table th, .pricing-table td {
+        padding: 5px;
+    }
+    .pricing-table th:nth-child(3),
+    .pricing-table th:nth-child(4),
+    .pricing-table th:nth-child(5),
+    .pricing-table th:nth-child(6),
+    .pricing-table th:nth-child(7) {
+        display: none; /* מסתיר עמודות לא חיוניות בנייד */
+    }
+    .pricing-table td:nth-child(3),
+    .pricing-table td:nth-child(4),
+    .pricing-table td:nth-child(5),
+    .pricing-table td:nth-child(6),
+    .pricing-table td:nth-child(7) {
+        display: none;
+    }
+}
 table {
     width: 100%;
     border-collapse: collapse;
