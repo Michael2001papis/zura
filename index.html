@@ -24,44 +24,48 @@
 <body>
 
 
-    <header>
+   <header>
         <nav class="top-menu">תפריט עליון</nav>
     </header>
 
 
     <main>
 
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu" id="menu">
+            <a href="#">עמוד ראשי</a>
+            <a href="#">אודות</a>
+            <a href="#">צור קשר</a>
+        </div>
         <section class="container">
-
             <div class="profile-container">
                 <img src="profile.jpg" alt="תמונה אישית">
                 <p>שם המשתמש</p>
                 <h1 class="title">כותרת ראשית</h1>
             </div>
-
         </section>
         
         <section class="container">
 
             <table class="pricing-table">
-
                 <thead>
-
                     <tr>
                         <th>דירה</th>
                         <th>סוג העבודה</th>
-                        <th>כמות (מ"ר)</th>
-                        <th>מחיר ל-10 מ"ר (ש"ח)</th>
-                        <th>סה"כ ללא מע"מ</th>
-                        <th>מע"מ (18%)</th>
-                        <th>סה"כ כולל מע"מ</th>
+                        <th class="hide-mobile">כמות (מ"ר)</th>
+                        <th class="hide-mobile">מחיר ל-10 מ"ר (ש"ח)</th>
+                        <th class="hide-mobile">סה"כ ללא מע"מ</th>
+                        <th class="hide-mobile">מע"מ (18%)</th>
+                        <th class="hide-mobile">סה"כ כולל מע"מ</th>
                         <th>חישוב</th>
                     </tr>
-                    
                 </thead>
 
                 <tbody id="table-body">
-
                     <tr>
                         <td><input type="number" min="1" class="apartment-number"></td>
                         <td>
@@ -72,11 +76,11 @@
                                 <option value="others">אחר</option>
                             </select>
                         </td>
-                        <td><input type="number" min="1" class="quantity"></td>
-                        <td><input type="number" min="1" class="price-per-10"></td>
-                        <td class="total-before-tax">0</td>
-                        <td class="tax-amount">0</td>
-                        <td class="total-with-tax">0</td>
+                        <td class="hide-mobile"><input type="number" min="1" class="quantity"></td>
+                        <td class="hide-mobile"><input type="number" min="1" class="price-per-10"></td>
+                        <td class="total-before-tax hide-mobile">0</td>
+                        <td class="tax-amount hide-mobile">0</td>
+                        <td class="total-with-tax hide-mobile">0</td>
                         <td><button onclick="calculateRow(this)">חשב</button></td>
                     </tr>
 
@@ -90,11 +94,11 @@
                                 <option value="others">אחר</option>
                             </select>
                         </td>
-                        <td><input type="number" min="1" class="quantity"></td>
-                        <td><input type="number" min="1" class="price-per-10"></td>
-                        <td class="total-before-tax">0</td>
-                        <td class="tax-amount">0</td>
-                        <td class="total-with-tax">0</td>
+                        <td class="hide-mobile"><input type="number" min="1" class="quantity"></td>
+                        <td class="hide-mobile"><input type="number" min="1" class="price-per-10"></td>
+                        <td class="total-before-tax hide-mobile">0</td>
+                        <td class="tax-amount hide-mobile">0</td>
+                        <td class="total-with-tax hide-mobile">0</td>
                         <td><button onclick="calculateRow(this)">חשב</button></td>
                     </tr>
 
@@ -108,11 +112,11 @@
                                 <option value="others">אחר</option>
                             </select>
                         </td>
-                        <td><input type="number" min="1" class="quantity"></td>
-                        <td><input type="number" min="1" class="price-per-10"></td>
-                        <td class="total-before-tax">0</td>
-                        <td class="tax-amount">0</td>
-                        <td class="total-with-tax">0</td>
+                        <td class="hide-mobile"><input type="number" min="1" class="quantity"></td>
+                        <td class="hide-mobile"><input type="number" min="1" class="price-per-10"></td>
+                        <td class="total-before-tax hide-mobile">0</td>
+                        <td class="tax-amount hide-mobile">0</td>
+                        <td class="total-with-tax hide-mobile">0</td>
                         <td><button onclick="calculateRow(this)">חשב</button></td>
                     </tr>
 
@@ -126,11 +130,11 @@
                                 <option value="others">אחר</option>
                             </select>
                         </td>
-                        <td><input type="number" min="1" class="quantity"></td>
-                        <td><input type="number" min="1" class="price-per-10"></td>
-                        <td class="total-before-tax">0</td>
-                        <td class="tax-amount">0</td>
-                        <td class="total-with-tax">0</td>
+                        <td class="hide-mobile"><input type="number" min="1" class="quantity"></td>
+                        <td class="hide-mobile"><input type="number" min="1" class="price-per-10"></td>
+                        <td class="total-before-tax hide-mobile">0</td>
+                        <td class="tax-amount hide-mobile">0</td>
+                        <td class="total-with-tax hide-mobile">0</td>
                         <td><button onclick="calculateRow(this)">חשב</button></td>
                     </tr>
 
@@ -209,7 +213,7 @@
 
     </main>
 
-
+    
     <footer>
         <nav class="bottom-menu">תפריט תחתון</nav>
     </footer>
