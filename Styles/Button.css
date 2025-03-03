@@ -1,14 +1,30 @@
 button {
-    padding: 5px 10px;
-    margin-top: 5px;
+    padding: 12px 20px;
+    margin-top: 8px;
+    border: 2px solid transparent;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
 }
-button {
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
 button:hover {
-    background: #ddd;
+    background: linear-gradient(135deg, #388E3C, #1B5E20);
+    border-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    button {
+        padding: 8px 15px;
+        font-size: 12px;
+        border-radius: 6px;
+    }
 }
